@@ -23,9 +23,7 @@ python -m playwright install chromium
 先关闭已有 Chrome，然后用远程调试端口启动。示例：
 
 ```powershell
-taskkill /F /IM chrome.exe
-& "C:\Program Files\Google\Chrome\Application\chrome.exe" `
-  --remote-debugging-port=10222 `
+taskkill /F /IM chrome.exe`
   --user-data-dir="D:\douyin_chrome_profile" `
   --profile-directory=user
 ```
@@ -39,7 +37,7 @@ python capture_douyin_chat_gifs.py ^
   --friend-name "好友昵称" ^
   --target-date 2026-05-23 ^
   --today 2026-05-25 ^
-  --cdp-url http://127.0.0.1:10222
+
 ```
 
 参数说明：
@@ -66,4 +64,4 @@ python capture_douyin_chat_gifs.py --friend-name "好友昵称" --target-date 20
 
 ## 注意
 
-这个工具依赖抖音网页端当前 DOM 和网络行为，抖音改版后可能需要重新调整选择器或日期规则。公开分享时不要提交自己的 `downloads/`、`logs/`、浏览器用户数据目录，也不要把好友昵称、Cookie 或个人路径写进提交。
+这个工具依赖抖音网页端当前 DOM 和网络行为，抖音改版后可能需要重新调整选择器或日期规则。
